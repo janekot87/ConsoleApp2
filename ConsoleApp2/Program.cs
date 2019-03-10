@@ -13,24 +13,26 @@ namespace ConsoleApp2
                 var sel1 = Selection.GetSelection();
                 var sel2 = Selection.GetSelection();
                 var sel3 = Selection.GetSelection();
-                var sel4 = Selection.GetSelection();
+               
 
-                var mrk1 = new Market(3);
-                mrk1.Id = 1;
-                mrk1.Name = "Market1";
-                mrk1.SportId = 1;
-                mrk1.LeagueId = 1;
-                mrk1.AddSelection(sel1);
-                mrk1.AddSelection(sel2);
-                mrk1.AddSelection(sel3);
-                mrk1.AddSelection(sel4);
+            var mrk1 = new Market(2)
+            {
+                Id = 1,
+                Name = "Market1",
+                SportId = 1,
+                LeagueId = 1
+            };
+                mrk1.AddSelection(value: sel1);
+                mrk1.AddSelection(value: sel2);
+                mrk1.AddSelection(value: sel3);
+              
 
             foreach (var i in mrk1.Selections)
             {
-                Console.WriteLine(i.Id);
-                Console.WriteLine(i.Name);
-                Console.WriteLine(i.Title);
-                Console.WriteLine(i.IsDisabled);
+                Console.WriteLine(value: i.Id);
+                Console.WriteLine(value: i.Name);
+                Console.WriteLine(value: i.Title);
+                Console.WriteLine(value: i.IsDisabled);
                 Console.WriteLine(i.Status);
                 Console.WriteLine();
             }
@@ -63,7 +65,12 @@ namespace ConsoleApp2
 
 
         }
-       
+
+        
+
         }
+
+
     }
+    
 

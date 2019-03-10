@@ -13,12 +13,11 @@ namespace ConsoleApp2
         public string Name { get; set; }
         public int SportId { get; set; }
         public int LeagueId { get; set; }
+        public int Capasity { get; set; }
+
         public List<Selection> Selections;
 
-        public List<Selection> list = new List<Selection>();
-
-        public int Capasity;
-
+        
         public Market()
         {
         }
@@ -27,18 +26,16 @@ namespace ConsoleApp2
 
         public Market(int c)
         {
-
             c = Capasity;
+            Selections = new List<Selection>();
         }
 
 
         public void AddSelection(Selection value)
         {
-
-
-            if (list.Count <= Capasity)
+            if (Selections.Count <= Capasity)
             {
-               list.Add(value);
+               Selections.Add(value);
             }
             else
             {
